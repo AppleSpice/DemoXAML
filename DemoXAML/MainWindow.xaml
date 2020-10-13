@@ -5,8 +5,39 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DemoXAML"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="WPFIntro" Height="450" Width="800">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <TextBlock HorizontalAlignment="Left" Margin="10,26,0,0" Grid.Row="1" Grid.Column="0" Text="Enter Your Name" VerticalAlignment="Top" FontSize="18"/>
+        <TextBox x:Name="YourName" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="10,30,0,0" Grid.Row="1" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" FontSize="18"/>
+        <TextBlock Grid.Column="3" HorizontalAlignment="Left" Margin="65,30,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Your Name is :" VerticalAlignment="Top"/>
+        <TextBlock x:Name="ChangeMe" Grid.Column="4" HorizontalAlignment="Left" Margin="52,26,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+        <Button x:Name="SubmitButton" Content="Submit" HorizontalAlignment="Left" Margin="42,32,0,0" Grid.Row="4" VerticalAlignment="Top" Width="75" Click="SubmitButton_Click"/>
+        <Button x:Name="ClearButton" Content="Clear" Grid.Column="2" HorizontalAlignment="Left" Margin="44,32,0,0" Grid.Row="4" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <Button x:Name="ExitButton" Content="Exit" Grid.Column="4" HorizontalAlignment="Left" Margin="36,32,0,0" Grid.Row="4" VerticalAlignment="Top" Width="75" Click="Close_Click"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,33,0,0" Grid.Row="2" Grid.Column="0" Text="Enter #1" VerticalAlignment="Top" FontSize="18" Grid.ColumnSpan="2"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,32,0,0" Grid.Row="3" Grid.Column="0" Text="Enter #2" VerticalAlignment="Top" FontSize="18" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="number1" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="10,32,0,0" Grid.Row="2" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" FontSize="18"/>
+        <TextBox x:Name="number2" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="10,31,0,0" Grid.Row="3" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" FontSize="18"/>
+        <TextBlock HorizontalAlignment="Left" Margin="51,33,0,0" Grid.Row="2" Grid.Column="3" Text="Answer:" VerticalAlignment="Top" FontSize="18"/>
+        <TextBlock x:Name="MathAnswer" Grid.Column="4" HorizontalAlignment="Left" Height="23" Margin="10,33,0,0" Grid.Row="2" TextWrapping="Wrap" Text="Math Answer" VerticalAlignment="Top" Width="120" FontSize="18"/>
+        <TextBlock  Margin="145,0,146,0" Text="Welcome To sample XAML aPP ENjoy!" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="30" Grid.ColumnSpan ="5">
+            <TextBlock.Effect>
+                <BlurEffect/>
+            </TextBlock.Effect>
+        </TextBlock>
     </Grid>
 </Window>
